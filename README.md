@@ -8,4 +8,7 @@ React: https://play.tailwindcss.com/WB68tX0Fet
 ```
 npm i
 npm run dev
+
+git commit -m "message" --no-verify
+git push
 ```
