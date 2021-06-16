@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import { Background } from '../background/Background';
-import { Button } from '../button/Button';
+import { Button } from '../components/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
 import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
@@ -34,7 +34,7 @@ const Hero = () => (
             <span className="text-primary-500">React developer</span>
           </>
         )}
-        description="The dssdsdeasiest way to build React landing page in seconds."
+        description="The easiest way to build React landing page in seconds."
         button={(
           <Link href="https://creativedesignsguru.com/category/nextjs/">
             <a>

@@ -12,6 +12,7 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ."
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.3.3",
     "classnames": "^2.2.6",
     "next": "^10.1.2",
     "next-seo": "^4.23.0",
@@ -44,7 +45,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npx lint-staged"
     }
   },
   "lint-staged": {

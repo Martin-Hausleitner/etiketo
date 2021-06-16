@@ -2,7 +2,7 @@ import React from 'react';
 
 import Link from 'next/link';
 
-import { Button } from '../button/Buttonold';
+import { Button } from '../components/Button';
 import { CTABanner } from '../cta/CTABanner';
 import { Section } from '../layout/Section';
 
@@ -14,9 +14,7 @@ const Banner = () => (
       button={(
         <Link href="https://creativedesignsguru.com/category/nextjs/">
           <a>
-            <Button
-            svg="image=/assets/images/feature2.svg"
-            >Get Started</Button>
+            <Button>Get Started</Button>
           </a>
         </Link>
       )}
