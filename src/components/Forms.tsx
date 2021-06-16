@@ -29,7 +29,7 @@ export const Checkbox = (props: PropsCB) => (
       id={props.id}
       name={props.name}
       type="checkbox"
-      className="w-4 h-4 text-black bg-gray-300 border-none rounded-md focus:ring-transparent"
+      className="w-4 h-4 text-black bg-gray-300 border-none rounded-md focus:ring-transparent "
     />
     <label htmlFor={props.id} className="block ml-2 text-sm text-gray-900">
       {props.label}

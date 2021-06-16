@@ -27,7 +27,6 @@ const Base = () => (
             <DownloadBTN text="Download" />
           </div>
         </div>
-        <embed className="pt-5 pl-5" src="file_name.pdf" width="800px" height="900" />
       </div>
     </div>
   </div>

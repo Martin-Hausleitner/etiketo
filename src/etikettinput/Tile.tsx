@@ -33,13 +33,14 @@ export const Tile = () => (
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            height="20px"
+            height="24px"
             viewBox="0 0 24 24"
-            width="20px"
+            width="24px"
             fill="#000000"
           >
-            <path d="M24 24H0V0h24v24z" fill="none" opacity=".87" />
-            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" />
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path d="M5 18.08V19h.92l9.06-9.06-.92-.92z" opacity=".3" />
+            <path d="M20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29s-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83zM3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM5.92 19H5v-.92l9.06-9.06.92.92L5.92 19z" />
           </svg>
         </button>
       </div>
@@ -53,8 +54,9 @@ export const InputTile = () => (
       <div className="flex-1 py-5 pl-5 overflow-hidden">
         <svg
           className="inline align-text-top"
-          width={21}
-          height="20.5"
+          height="24px"
+          viewBox="0 0 24 24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
           fill="#000000"
         >
@@ -73,23 +75,6 @@ export const InputTile = () => (
           </g>
         </svg>
         <h1 className="inline text-2xl font-semibold leading-none">Absender</h1>
-      </div>
-      <div className="flex-none pt-2.5 pr-2.5 pl-1">
-        <button
-          type="button"
-          className="px-2 py-2 font-medium tracking-wide text-black capitalize transition duration-300 ease-in-out transform rounded-xl hover:bg-gray-300 focus:outline-none active:scale-95"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="20px"
-            viewBox="0 0 24 24"
-            width="20px"
-            fill="#000000"
-          >
-            <path d="M24 24H0V0h24v24z" fill="none" opacity=".87" />
-            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" />
-          </svg>
-        </button>
       </div>
     </div>
     <div className="px-5 pb-5">
