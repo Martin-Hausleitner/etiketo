@@ -2,9 +2,6 @@ module.exports = {
   purge: ['./src/**/*.{js,ts,jsx,tsx}'],
   darkMode: false,
   theme: {
-    fontSize: {
-
-    },
     extend: {
       colors: {
         primary: {
@@ -33,7 +30,5 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [
-    require('@tailwindcss/forms'),
-  ],
+  plugins: [require('@tailwindcss/forms')],
 };

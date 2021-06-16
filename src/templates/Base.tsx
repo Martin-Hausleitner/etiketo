@@ -1,42 +1,35 @@
 import React from 'react';
 
+import { PrintBTN, DownloadBTN, NewBTN } from '../components/Buttons';
+import { Tile, InputTile } from '../etikettinput/Tile';
 import { Meta } from '../layout/Meta';
 import { Config } from '../utils/Config';
-import { Banner } from './Banner';
-import { Footer } from './Footer';
-import { PrintBTN, DownloadBTN, DeleteBTN, NewBTN } from '../components/Buttons'
-import { Input, Checkbox } from '../components/Forms'
-import { Hero } from './Hero';
-import { VerticalFeatures } from './VerticalFeatures';
-import { Tile } from '../etikettinput/Tile'
 
 const Base = () => (
-  <div className="antialiased text-gray-600">
+  <div className="container mx-auto">
+    <h1 className="py-10 text-5xl font-black">Etiketo</h1>
     <Meta title={Config.title} description={Config.description} />
-    <PrintBTN
-    text="Drucken"
-      />
-    
-    <DownloadBTN
-    text="Download"/>
-    <DeleteBTN text="Download"/>
-    <Input 
-      type="{props.type}"
-      id="{props.id}"
-      name="{props.name}"
-      placeholder="Test"
-    />
-    <Tile/>
+    <div className="flex ">
+      <div className="flex-1 ">
+        <div className="">
+          <NewBTN text="Neues Versandetikett erstellen" />
+          <InputTile />
+          <Tile />
+        </div>
+      </div>
 
-  <NewBTN
-  text="Neues Versandetikett erstellen" />
-
-<Checkbox 
-      id="{props.id}"
-      name="{props.name}"
-      label="sdds"
-    />
-    
+      <div className="flex-1">
+        <div className="flex flex-row-reverse">
+          <div className="flex-initial pl-3">
+            <PrintBTN text="Drucken" />
+          </div>
+          <div className="flex-initial">
+            <DownloadBTN text="Download" />
+          </div>
+        </div>
+        <embed className="pt-5 pl-5" src="file_name.pdf" width="800px" height="900" />
+      </div>
+    </div>
   </div>
 );
 

@@ -4,6 +4,4 @@
 
 @tailwind utilities;
 
-button, p, li {
-    color: black;
-}
+html {background-color: #F3F4F6}
