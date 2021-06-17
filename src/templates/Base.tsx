@@ -23,11 +23,13 @@ const Base = () => (
           <div className="flex-initial pl-3">
             <PrintBTN text="Drucken" />
           </div>
-          <div className="flex-initial">
+          <div className="flex-initial pl-1">
             <DownloadBTN text="Download" />
           </div>
         </div>
       </div>
+
+      <div id="root" />
     </div>
   </div>
 );
