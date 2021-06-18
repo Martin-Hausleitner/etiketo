@@ -2,12 +2,21 @@
 # Etiketo
 Etiketo is a simple next.js webapp to create shipping labels for private persons. So you can quickly create a label for ebay kleinanzeigen Willhaben Shpock...
 
+## Features
+ - 🏡 Address autocomplete
+ - 🖨️ Print or Download the label
+ - 📥 Download the label
+ - 💾 Save receiver address
+
+
 ## Demo
 #### Online Demo
 coming soon
 
 #### Screenshots
 coming soon
+
+
 
 ## Install
 1. ✂️Clone the Repo
