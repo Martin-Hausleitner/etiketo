@@ -11,7 +11,7 @@ Etiketo is a simple next.js webapp to create shipping labels for private persons
 
 ## Demo
 #### Online Demo
-coming soon
+https://etiketo.vercel.app/
 
 #### Screenshots
 coming soon
