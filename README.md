@@ -1,5 +1,5 @@
 
-# **Etiketo**
+# Etiketo
 Etiketo is a simple next.js webapp to create shipping labels for private persons. So you can quickly create a label for ebay kleinanzeigen Willhaben Shpock...
 
 ## Demo
@@ -10,10 +10,11 @@ coming soon
 coming soon
 
 ## Install
-1. Clone the Repo
-2. `npm i`
-3. `npm run dev`
-4. Open the address in the browser: [localhost:8080](http://localhost:8080/)
+1. ✂️Clone the Repo
+2. Open the cloned repo path
+3. Run `npm i` to install all packages
+4. Run `npm run dev` to start the next.js app
+5. Open the address in the 🌐browser: [localhost:8080](http://localhost:8080/)
 
 ## Programmed with
 Developer experience first:
