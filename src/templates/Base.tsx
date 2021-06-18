@@ -6,12 +6,12 @@ import { Meta } from '../layout/Meta';
 import { Config } from '../utils/Config';
 
 const Base = () => (
-  <div className="container mx-auto">
+  <div className="container px-10 mx-auto 2xl:px-72 xl:p-50 sm:px-2 md:px-2">
     <h1 className="py-10 text-5xl font-black">Etiketo</h1>
     <Meta title={Config.title} description={Config.description} />
     <div className="flex ">
       <div className="flex-1 ">
-        <div className="">
+        <div>
           <NewBTN text="Neues Versandetikett erstellen" />
           <InputTile />
           <Tile />
