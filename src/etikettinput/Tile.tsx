@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { DeleteBTN, SaveBTN } from '../components/Buttons';
 import { Checkbox, Input } from '../components/Forms';

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { PrintBTN, DownloadBTN, NewBTN } from '../components/Buttons';
-import Tile1, { Tile, InputTile } from '../etikettinput/Tile';
+import Tile1 from '../etikettinput/Tile';
 import { Meta } from '../layout/Meta';
 import { Config } from '../utils/Config';
 
