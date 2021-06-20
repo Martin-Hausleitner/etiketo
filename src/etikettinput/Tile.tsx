@@ -1,66 +1,104 @@
-import React, {Component} from 'react';
+import React, { useState } from 'react';
 
 import { DeleteBTN, SaveBTN } from '../components/Buttons';
 import { Checkbox, Input } from '../components/Forms';
-/*
-interface Props {
-  text: string;
-} */
 
-class Tile extends Component{
+type State = {
+  eName: string;
+  eStreet: string;
+  ePLZ: string;
+  eCity: string;
+  aName: string;
+  aStreet: string;
+  aPLZ: string;
+  aCity: string;
+};
+export default class Tile1 extends React.Component<Props, State> {
   state = {
-    abs_name: '',
-    abs_adresse: '',
-    abs_plz: '',
-    abs_stadt: '',
+    eName: '',
+    eStreet: '',
+    ePLZ: '',
+    eCity: '',
+    aName: '',
+    aStreet: '',
+    aPLZ: '',
+    aCity: '',
+  };
 
-    emp_name: '',
-    emp_adresse: '',
-    emp_plz: '',
-    emp_stadt: '',
-
-    postSubmitted: false
-  }
-
-  onChange = input => e => {
+  // typing on RIGHT hand side of =
+  onChange = (e: React.FormEvent<HTMLInputElement>): void => {
     this.setState({
-      [input]: e.target.value
+      eName: e.currentTarget.value,
+      eStreet: e.currentTarget.value,
+      ePLZ: e.currentTarget.value,
+      eCity: e.currentTarget.value,
+      aName: e.currentTarget.value,
+      aStreet: e.currentTarget.value,
+      aPLZ: e.currentTarget.value,
+      aCity: e.currentTarget.value,
     });
-  }
-
-  submitPost = (e) => {
-    if(!this.state.abs_adresse || !this.state.emp_adresse){
-      alert('Bitte füllen Sie alle Felder aus!');
-      e.preventDefault();
-    }
-    else{
-      this.setState({
-        postSubmitted: true
-      });
-    }
-  }
-
-  render(){
-    return(
+    
+  };
+  /* 
+  https://reactjs.org/docs/forms.html
+  https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forms_and_events
+  
+  */
+  render(): JSX.Element {
+    return (
       <>
-        { !this.state.postSubmitted ?
-            (
-              <div className="mt-5 bg-white shadow cursor-pointer rounded-xl">
-                <div className="flex">
+        
+        
+            <Input id="" name="" placeholder="Adresse" value={this.state.eName} onChange={this.onChange} />
+            <Input id="" name="" placeholder="Adresse" value={this.state.eStreet} onChange={this.onChange} />
+
+        <Tile
+          eName={this.state.eName}
+          eStreet={this.state.eStreet}
+          ePLZ={this.state.ePLZ}
+          eCity={this.state.eCity}
+          aName={this.state.aName}
+          aStreet={this.state.aStreet}
+          aPLZ={this.state.aStreet}
+          aCity={this.state.aStreet}
+        />
+      </>
+    );
+  }
+}
+
+interface Props {
+  eName: string;
+  eStreet: string;
+  ePLZ: string;
+  eCity: string;
+  aName: string;
+  aStreet: string;
+  aPLZ: string;
+  aCity: string;
+}
+
+export const Tile = (p: Props) => (
+  <div className="mt-5 bg-white shadow cursor-pointer rounded-xl">
+    <div className="flex">
       <div className="flex-1 py-5 pl-5 overflow-hidden">
         <ul>
           <li className="text-xs text-gray-600 uppercase ">Empfänger</li>
-          <li>Martin Hausleitne</li>
-          <li>Wüstenrotstrasse 11</li>
-          <li>4020 Linz</li>
+          <li>{p.eName}</li>
+          <li>{p.eStreet}</li>
+          <li>
+            {p.ePLZ} {p.eCity}
+          </li>
         </ul>
       </div>
       <div className="flex-1 py-5 pl-1 overflow-hidden">
         <ul>
           <li className="text-xs text-gray-600 uppercase">Absender</li>
-          <li>Martin Hausleitne</li>
-          <li>Wüstenrotstrasse 11</li>
-          <li>4020 Linz</li>
+          <li>{p.aName}</li>
+          <li>{p.aStreet}</li>
+          <li>
+            {p.aPLZ} {p.aCity}
+          </li>
         </ul>
       </div>
       <div className="flex-none pt-2.5 pr-2.5 pl-1">
@@ -83,6 +121,10 @@ class Tile extends Component{
       </div>
     </div>
   </div>
+);
+
+export const InputTile = (p: Props) => (
+  <>
   <div className="mt-5 bg-white rounded-lg shadow">
     <div className="flex">
       <div className="flex-1 py-5 pl-5 overflow-hidden">
@@ -112,20 +154,13 @@ class Tile extends Component{
       </div>
     </div>
     <div className="px-5 pb-5">
-      <input
-        type="{props.type}"
-        id="{props.id}"
-        name="{abs_name}"
-        placeholder="Vor- und Nachname "
-      />
-      <input type="{props.type}" id="{props.id}" name="{abs_adresse}" placeholder="Adresse " />
-      {' '}
+      <Input id="" name="" placeholder="Adresse" value={p.aName} onChange="" />
       <div className="flex">
         <div className="flex-grow w-1/4 pr-2">
-          <input type="{props.type}" id="{props.id}" name="{abs_plz}" placeholder="PLZ" />
+          <Input id="" name="" placeholder="Adresse" value={p.aName} onChange="" />
         </div>
         <div className="flex-grow">
-          <input type="{props.type}" id="{props.id}" name="{abs_stadt}" placeholder="Stadt" />
+          <Input id="" name="" placeholder="Adresse" value={p.aName} onChange="" />
         </div>
       </div>
       <Checkbox id="safeAdress" name="safeAdress" label="Als Standardadresse speichern" />
@@ -159,20 +194,14 @@ class Tile extends Component{
       <div className="flex-none pt-2.5 pr-2.5 pl-1" />
     </div>
     <div className="px-5 pb-5">
-      <input
-        type="{props.type}"
-        id="{props.id}"
-        name="emp_name"
-        placeholder="Vor- und Nachname"
-      />
-      <input type="{props.type}" id="{props.id}" name="{emp_adresse}" placeholder="Adresse " />
-      {' '}
+      <Input id="" name="" placeholder="Adresse" value={p.aName} onChange="" />
+      <Input id="" name="" placeholder="Adresse" value={p.aName} onChange="" />
       <div className="flex">
         <div className="flex-grow w-1/4 pr-2">
-          <input type="{props.type}" id="{props.id}" name="{emp_plz}" placeholder="PLZ" />
+          <Input id="" name="" placeholder="Adresse" value={p.aName} onChange="" />
         </div>
         <div className="flex-grow">
-          <input type="{props.type}" id="{props.id}" name="{emp_stadt}" placeholder="Stadt" />
+          <Input id="" name="" placeholder="Adresse" value={p.aName} onChange="" />
         </div>
       </div>
     </div>
@@ -187,11 +216,5 @@ class Tile extends Component{
       </div>
     </div>
   </div>
-            )
-        }
-      </>
-    )
-  }
-
-}
-
+  </>
+);
