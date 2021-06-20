@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import { DeleteBTN, SaveBTN } from '../components/Buttons';
 import { Checkbox, Input } from '../components/Forms';
@@ -7,9 +7,46 @@ interface Props {
   text: string;
 } */
 
-export const Tile = () => (
-  <div className="mt-5 bg-white shadow cursor-pointer rounded-xl">
-    <div className="flex">
+class Tile extends Component{
+  state = {
+    abs_name: '',
+    abs_adresse: '',
+    abs_plz: '',
+    abs_stadt: '',
+
+    emp_name: '',
+    emp_adresse: '',
+    emp_plz: '',
+    emp_stadt: '',
+
+    postSubmitted: false
+  }
+
+  onChange = input => e => {
+    this.setState({
+      [input]: e.target.value
+    });
+  }
+
+  submitPost = (e) => {
+    if(!this.state.abs_adresse || !this.state.emp_adresse){
+      alert('Bitte füllen Sie alle Felder aus!');
+      e.preventDefault();
+    }
+    else{
+      this.setState({
+        postSubmitted: true
+      });
+    }
+  }
+
+  render(){
+    return(
+      <>
+        { !this.state.postSubmitted ?
+            (
+              <div className="mt-5 bg-white shadow cursor-pointer rounded-xl">
+                <div className="flex">
       <div className="flex-1 py-5 pl-5 overflow-hidden">
         <ul>
           <li className="text-xs text-gray-600 uppercase ">Empfänger</li>
@@ -46,9 +83,6 @@ export const Tile = () => (
       </div>
     </div>
   </div>
-);
-
-export const InputTile = () => (
   <div className="mt-5 bg-white rounded-lg shadow">
     <div className="flex">
       <div className="flex-1 py-5 pl-5 overflow-hidden">
@@ -78,20 +112,20 @@ export const InputTile = () => (
       </div>
     </div>
     <div className="px-5 pb-5">
-      <Input
+      <input
         type="{props.type}"
         id="{props.id}"
-        name="{props.name}"
+        name="{abs_name}"
         placeholder="Vor- und Nachname "
       />
-      <Input type="{props.type}" id="{props.id}" name="{props.name}" placeholder="Adresse " />
+      <input type="{props.type}" id="{props.id}" name="{abs_adresse}" placeholder="Adresse " />
       {' '}
       <div className="flex">
         <div className="flex-grow w-1/4 pr-2">
-          <Input type="{props.type}" id="{props.id}" name="{props.name}" placeholder="PLZ" />
+          <input type="{props.type}" id="{props.id}" name="{abs_plz}" placeholder="PLZ" />
         </div>
         <div className="flex-grow">
-          <Input type="{props.type}" id="{props.id}" name="{props.name}" placeholder="Stadt" />
+          <input type="{props.type}" id="{props.id}" name="{abs_stadt}" placeholder="Stadt" />
         </div>
       </div>
       <Checkbox id="safeAdress" name="safeAdress" label="Als Standardadresse speichern" />
@@ -125,20 +159,20 @@ export const InputTile = () => (
       <div className="flex-none pt-2.5 pr-2.5 pl-1" />
     </div>
     <div className="px-5 pb-5">
-      <Input
+      <input
         type="{props.type}"
         id="{props.id}"
-        name="{props.name}"
-        placeholder="Vor- und Nachname "
+        name="emp_name"
+        placeholder="Vor- und Nachname"
       />
-      <Input type="{props.type}" id="{props.id}" name="{props.name}" placeholder="Adresse " />
+      <input type="{props.type}" id="{props.id}" name="{emp_adresse}" placeholder="Adresse " />
       {' '}
       <div className="flex">
         <div className="flex-grow w-1/4 pr-2">
-          <Input type="{props.type}" id="{props.id}" name="{props.name}" placeholder="PLZ" />
+          <input type="{props.type}" id="{props.id}" name="{emp_plz}" placeholder="PLZ" />
         </div>
         <div className="flex-grow">
-          <Input type="{props.type}" id="{props.id}" name="{props.name}" placeholder="Stadt" />
+          <input type="{props.type}" id="{props.id}" name="{emp_stadt}" placeholder="Stadt" />
         </div>
       </div>
     </div>
@@ -153,4 +187,11 @@ export const InputTile = () => (
       </div>
     </div>
   </div>
-);
+            )
+        }
+      </>
+    )
+  }
+
+}
+

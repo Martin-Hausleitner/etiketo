@@ -1,9 +1,9 @@
+
+
 import React from 'react';
+/*
 
-import {
-  Page, Text, View, Document, StyleSheet,
-} from '@react-pdf/renderer';
-
+import { Page, Text, View, Document, StyleSheet, } from '@react-pdf/renderer';
 // Create styles
 const styles = StyleSheet.create({
   page: {
@@ -22,7 +22,9 @@ export const MyDocument = () => (
   <Document>
     <Page size="A4" style={styles.page}>
       <View style={styles.section}>
-        <Text>Section #1</Text>
+        <Text>Absender: <br></br>
+              {props.id}
+        </Text>
       </View>
       <View style={styles.section}>
         <Text>Section #2</Text>
@@ -30,3 +32,4 @@ export const MyDocument = () => (
     </Page>
   </Document>
 );
+*/
