@@ -1,29 +1,104 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { DeleteBTN, SaveBTN } from '../components/Buttons';
 import { Checkbox, Input } from '../components/Forms';
-/*
-interface Props {
-  text: string;
-} */
 
-export const Tile = () => (
+type State = {
+  eName: string;
+  eStreet: string;
+  ePLZ: string;
+  eCity: string;
+  aName: string;
+  aStreet: string;
+  aPLZ: string;
+  aCity: string;
+};
+export default class Tile1 extends React.Component<Props, State> {
+  state = {
+    eName: '',
+    eStreet: '',
+    ePLZ: '',
+    eCity: '',
+    aName: '',
+    aStreet: '',
+    aPLZ: '',
+    aCity: '',
+  };
+
+  // typing on RIGHT hand side of =
+  onChange = (e: React.FormEvent<HTMLInputElement>): void => {
+    this.setState({
+      eName: e.currentTarget.value,
+      eStreet: e.currentTarget.value,
+      ePLZ: e.currentTarget.value,
+      eCity: e.currentTarget.value,
+      aName: e.currentTarget.value,
+      aStreet: e.currentTarget.value,
+      aPLZ: e.currentTarget.value,
+      aCity: e.currentTarget.value,
+    });
+    
+  };
+  /* 
+  https://reactjs.org/docs/forms.html
+  https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forms_and_events
+  
+  */
+  render(): JSX.Element {
+    return (
+      <>
+        
+        
+            <Input id="" name="" placeholder="Adresse" value={this.state.eName} onChange={this.onChange} />
+            <Input id="" name="" placeholder="Adresse" value={this.state.eStreet} onChange={this.onChange} />
+
+        <Tile
+          eName={this.state.eName}
+          eStreet={this.state.eStreet}
+          ePLZ={this.state.ePLZ}
+          eCity={this.state.eCity}
+          aName={this.state.aName}
+          aStreet={this.state.aStreet}
+          aPLZ={this.state.aStreet}
+          aCity={this.state.aStreet}
+        />
+      </>
+    );
+  }
+}
+
+interface Props {
+  eName: string;
+  eStreet: string;
+  ePLZ: string;
+  eCity: string;
+  aName: string;
+  aStreet: string;
+  aPLZ: string;
+  aCity: string;
+}
+
+export const Tile = (p: Props) => (
   <div className="mt-5 bg-white shadow cursor-pointer rounded-xl">
     <div className="flex">
       <div className="flex-1 py-5 pl-5 overflow-hidden">
         <ul>
           <li className="text-xs text-gray-600 uppercase ">Empfänger</li>
-          <li>Martin Hausleitne</li>
-          <li>Wüstenrotstrasse 11</li>
-          <li>4020 Linz</li>
+          <li>{p.eName}</li>
+          <li>{p.eStreet}</li>
+          <li>
+            {p.ePLZ} {p.eCity}
+          </li>
         </ul>
       </div>
       <div className="flex-1 py-5 pl-1 overflow-hidden">
         <ul>
           <li className="text-xs text-gray-600 uppercase">Absender</li>
-          <li>Martin Hausleitne</li>
-          <li>Wüstenrotstrasse 11</li>
-          <li>4020 Linz</li>
+          <li>{p.aName}</li>
+          <li>{p.aStreet}</li>
+          <li>
+            {p.aPLZ} {p.aCity}
+          </li>
         </ul>
       </div>
       <div className="flex-none pt-2.5 pr-2.5 pl-1">
@@ -48,7 +123,7 @@ export const Tile = () => (
   </div>
 );
 
-export const InputTile = () => (
+export const InputTile = (p: Props) => (
   <div className="mt-5 bg-white rounded-lg shadow">
     <div className="flex">
       <div className="flex-1 py-5 pl-5 overflow-hidden">
@@ -78,20 +153,13 @@ export const InputTile = () => (
       </div>
     </div>
     <div className="px-5 pb-5">
-      <Input
-        type="{props.type}"
-        id="{props.id}"
-        name="{props.name}"
-        placeholder="Vor- und Nachname "
-      />
-      <Input type="{props.type}" id="{props.id}" name="{props.name}" placeholder="Adresse " />
-      {' '}
+      <Input id="" name="" placeholder="Adresse" value={p.aName} onChange="" />
       <div className="flex">
         <div className="flex-grow w-1/4 pr-2">
-          <Input type="{props.type}" id="{props.id}" name="{props.name}" placeholder="PLZ" />
+          <Input id="" name="" placeholder="Adresse" value={p.aName} onChange="" />
         </div>
         <div className="flex-grow">
-          <Input type="{props.type}" id="{props.id}" name="{props.name}" placeholder="Stadt" />
+          <Input id="" name="" placeholder="Adresse" value={p.aName} onChange="" />
         </div>
       </div>
       <Checkbox id="safeAdress" name="safeAdress" label="Als Standardadresse speichern" />
@@ -125,20 +193,14 @@ export const InputTile = () => (
       <div className="flex-none pt-2.5 pr-2.5 pl-1" />
     </div>
     <div className="px-5 pb-5">
-      <Input
-        type="{props.type}"
-        id="{props.id}"
-        name="{props.name}"
-        placeholder="Vor- und Nachname "
-      />
-      <Input type="{props.type}" id="{props.id}" name="{props.name}" placeholder="Adresse " />
-      {' '}
+      <Input id="" name="" placeholder="Adresse" value={p.aName} onChange="" />
+      <Input id="" name="" placeholder="Adresse" value={p.aName} onChange="" />
       <div className="flex">
         <div className="flex-grow w-1/4 pr-2">
-          <Input type="{props.type}" id="{props.id}" name="{props.name}" placeholder="PLZ" />
+          <Input id="" name="" placeholder="Adresse" value={p.aName} onChange="" />
         </div>
         <div className="flex-grow">
-          <Input type="{props.type}" id="{props.id}" name="{props.name}" placeholder="Stadt" />
+          <Input id="" name="" placeholder="Adresse" value={p.aName} onChange="" />
         </div>
       </div>
     </div>
