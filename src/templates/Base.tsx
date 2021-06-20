@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { PrintBTN, DownloadBTN, NewBTN } from '../components/Buttons';
-import { Tile, InputTile } from '../etikettinput/Tile';
+import Tile1 from '../etikettinput/Tile';
 import { Meta } from '../layout/Meta';
 import { Config } from '../utils/Config';
 
@@ -13,8 +13,8 @@ const Base = () => (
       <div className="flex-1 ">
         <div>
           <NewBTN text="Neues Versandetikett erstellen" />
-          <InputTile />
-          <Tile />
+   
+          <Tile1 />
         </div>
       </div>
 
