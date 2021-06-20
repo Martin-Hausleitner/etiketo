@@ -25,6 +25,10 @@ coming soon
 4. Run `npm run dev` to start the next.js app
 5. Open the address in the 🌐browser: [localhost:8080](http://localhost:8080/)
 
+or
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FMartin-Hausleitner%2Fetiketo)
+
 ## Programmed with
 Developer experience first:
 
@@ -44,4 +48,3 @@ Built-in feature from Next.js:
 -   💨  Live reload
 -   ✅  Cache busting
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FMartin-Hausleitner%2Fetiketo)
