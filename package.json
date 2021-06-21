@@ -14,6 +14,7 @@
   "dependencies": {
     "@react-pdf/renderer": "^2.0.15",
     "@tailwindcss/forms": "^0.3.3",
+    "@types/react-pdf": "^5.0.4",
     "classnames": "^2.2.6",
     "next": "^10.1.2",
     "next-seo": "^4.23.0",
@@ -41,7 +42,7 @@
     "postcss": "^8.2.9",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
-    "tailwindcss": "^2.0.4",
+    "tailwindcss": "^2.2.2",
     "typescript": "^4.2.3"
   },
   "husky": {
