@@ -25,6 +25,7 @@ const Base = () => (
           </div>
           <div className="flex-initial pl-1">
             <DownloadBTN text="Download" />
+            <PDF/>
           </div>
         </div>
       </div>
