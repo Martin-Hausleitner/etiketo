@@ -13,7 +13,7 @@ const Base = () => (
       <div className="flex-1 ">
         <div>
           <NewBTN text="Neues Versandetikett erstellen" />
-   
+
           <Tile1 />
         </div>
       </div>
@@ -25,12 +25,12 @@ const Base = () => (
           </div>
           <div className="flex-initial pl-1">
             <DownloadBTN text="Download" />
-            <PDF/>
           </div>
         </div>
+        <div className="p-2">
+          <img src="etikett.png" alt="Selfhtml" />
+        </div>
       </div>
-
-      <div id="root" />
     </div>
   </div>
 );
