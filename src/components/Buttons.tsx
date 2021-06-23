@@ -7,6 +7,7 @@ interface Props {
 export const DownloadBTN = (props: Props) => (
   <button
     type="button"
+    
     className=" ml-5 flex items-center px-5 py-2.5 font-medium tracking-wide text-black capitalize rounded-md  hover:bg-gray-300  focus:outline-none  transition duration-300 transform active:scale-95 ease-in-out"
   >
     <svg

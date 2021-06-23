@@ -4,6 +4,8 @@ import { PrintBTN, DownloadBTN, NewBTN } from '../components/Buttons';
 import Tile1 from '../etikettinput/Tile';
 import { Meta } from '../layout/Meta';
 import { Config } from '../utils/Config';
+import dynamic from 'next/dynamic';
+const PDF = dynamic(() => import('../etikettinput/PDF'), { ssr: false });
 
 const Base = () => (
   <div className="container px-10 mx-auto 2xl:px-72 xl:p-50 sm:px-2 md:px-2">
@@ -28,9 +30,10 @@ const Base = () => (
           </div>
         </div>
         <div className="p-2">
-          <img src="etikett.png" alt="Selfhtml" />
+        <PDF/>
         </div>
       </div>
+      
     </div>
   </div>
 );
