@@ -1,3 +1,5 @@
+# Project is not finished and not maintained any more!
+
 
 # Etiketo
 Etiketo is a simple next.js webapp to create shipping labels for private persons. So you can quickly create a label for ebay kleinanzeigen Willhaben Shpock...
